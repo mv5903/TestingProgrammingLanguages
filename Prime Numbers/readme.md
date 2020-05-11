@@ -10,7 +10,7 @@
 
 #### Algorithm Used (Java Example):
 ```Java
-public static int primeNums(int times, int num) {
+public static int primeNums(int num) {
 	long timeStart = System.nanoTime(); //time in nanoseconds
 	String output = "";
 	boolean isPrime = false;
