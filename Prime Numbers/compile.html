@@ -18,42 +18,42 @@
 			}
 		</style>
 		<script>
-			//JavaScript starts here
-			function run() {
-			//const prompt = require('prompt-sync')(); //NODE STUFF
+		//JavaScript starts here
+		function run() {
+		//const prompt = require('prompt-sync')(); //NODE STUFF
 
-				var number = prompt("Enter a number: ");
-				var times = prompt("How many times? ");
+			var number = prompt("Enter a number: ");
+			var times = prompt("How many times? ");
 
-				function primes(number, times) {
-				var d = new Date();
-				var milistart = d.getTime();
-				var isPrime = false;
-				var output = "";
-				for (var i = 2; i < number; i++) {
-					isPrime = true;
-					for (var j = 2; j < number; j++) {
-						if (i % j == 0 && j != i) {
-							isPrime = false;
-						}
-					}
-					if (isPrime) {
-						output+=i;
-						output+=", ";
+			function primes(number, times) {
+			var d = new Date();
+			var milistart = d.getTime();
+			var isPrime = false;
+			var output = "";
+			for (var i = 2; i < number; i++) {
+				isPrime = true;
+				for (var j = 2; j < number; j++) {
+					if (i % j == 0 && j != i) {
+						isPrime = false;
 					}
 				}
-				var nd = new Date();
-				return nd.getTime() - milistart;
-			}
-				var start = 0;
-				for (var i = 0; i < times; i++) {
-					start+=primes(number, times);
-					console.log(i); //to see progress in the console
+				if (isPrime) {
+					output+=i;
+					output+=", ";
 				}
-				var toRun = "Took a total of " + start + "ms, averaging " + start/times + "ms each.";
-				document.getElementById("output").innerHTML = toRun;
 			}
-			//JavaScript ends here
+			var nd = new Date();
+			return nd.getTime() - milistart;
+		}
+			var start = 0;
+			for (var i = 0; i < times; i++) {
+				start+=primes(number, times);
+				console.log(i); //to see progress in the console
+			}
+			var toRun = "Took a total of " + start + "ms, averaging " + start/times + "ms each.";
+			document.getElementById("output").innerHTML = toRun;
+		}
+		//JavaScript ends here
 		</script>
 		<body>
 		<h3>Continue entering points. When done, click cancel or don't enter anything.</h3>
